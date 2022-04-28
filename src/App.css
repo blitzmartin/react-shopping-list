@@ -1,0 +1,110 @@
+.App {
+  text-align: center;
+  box-sizing: content-box;
+}
+
+.ShoppingDiv{
+  background-color: rgb(233, 252, 253);
+  border: #282c34 solid 2px;
+  border-radius: 10px;
+  margin: 2rem 20rem;
+  padding: 1.5rem 5rem;
+  box-shadow: 0 4px 2px -2px gray;
+}
+
+.ShoppingTitle{
+  font-size: 2.2rem;
+  color: rgb(255, 0, 217);
+}
+
+.ShoppingItem{
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.Header {
+  background-color: yellow;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+.Header h1 {
+  color: #282c34;
+  margin: 0;
+}
+
+.Footer {
+  background-color: rgb(255, 0, 234);
+  margin: 0 auto;
+  padding: 1rem;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+}
+
+.Footer h2 {
+  color: #ffffff;
+  margin: 0;
+}
+
+.FooterSpace { 
+  clear: both; 
+  height: 60px; 
+}
+
+
+@media only screen and (max-width: 1000px) {
+  .ShoppingDiv{
+    margin: 2rem 5rem;
+    padding: 1.5rem 5rem;
+    box-shadow: 0 4px 2px -2px gray;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+ul {
+  list-style-type:none;
+  padding-left: 0;
+}
+
+li {
+  display: grid;
+  grid-template-columns: 1fr 0.5fr 0.5fr 0.5fr 1.5fr 1.5fr;
+  justify-content: center;
+}
+
+li > * {
+  margin: 0.2rem;
+}
+
+
+.customBtn {
+  color: white;
+  font-size: 1.2rem;
+  padding: 0.2rem 0.4rem
+}
