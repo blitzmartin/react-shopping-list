@@ -12,13 +12,14 @@ function ShoppingList() {
   function submitHandler() {
     const duplicate = (element) => element.name === value;
     if (listItems.some(duplicate)) {
-      console.log('already exists')
+      console.log(listItems[0].name);
+      console.log('already exists ')
     } else {
       let newItem = { name: value, quantity: 0, id: Math.floor(Math.random() * 1000) };
       setItem([...listItems, newItem]);
     }
     setValue("");
-  }
+}
 
 
   function deleteItem(id) {
@@ -46,6 +47,13 @@ function ShoppingList() {
     setItem(newArray);
   }
 
+  function calculateClass(name){
+    if(name===value){
+      return 'highlight'
+    } else {
+      return ''
+    }
+  }
 
 
   return (
@@ -68,7 +76,7 @@ function ShoppingList() {
           {listItems.map((item, index) => {
             return (
               <li className="ShoppingItem" key={item.id}>
-                <span>{item.name}:</span>
+                <span className={calculateClass(item.name)}>{item.name}:</span>
                 <span>{item.quantity}</span>
                 <Button color={{ backgroundColor: 'green' }} btnValue="+" handler={() => increaseItem(index)} />
                 <Button color={{ backgroundColor: 'blue' }} btnValue="-" handler={() => decreaseItem(index)} />
